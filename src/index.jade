@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title WithSchemaEditor
+    link(rel="stylesheet", href="lib/metro-bootstrap/dist/css/metro-bootstrap.css")
+    link(rel="stylesheet", href="lib/font-awesome/css/font-awesome.css")
+    link(rel="stylesheet", href="index.css")
+    //script(src="lib/jquery/dist/jquery.js")
+    script.
+      window.jQuery = window.$ = require('./lib/jquery/dist/jquery.js');
+    script(src="lib/bootstrap/dist/js/bootstrap.js")
+    script(src="lib/json-editor/dist/jsoneditor.js")
+    script(src="main.js")
+  body
+    nav.navbar.navbar-inverse.app-titlebar(role="navigation")
+      .navbar-header
+        button.navbar-toggle(data-toggle="collapse", data-target=".navbar-ex1-collapse")
+          span.sr-only Navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand WithSchemaEditor
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        .navbar-form.navbar-left(role="search")
+          .form-group
+            input#target_view.form-control(readonly)
+          button(type="submit")#target_file.btn.btn-default
+            i.fa.fa-file
+            span.sr-only File
+          button#target_directory.btn.btn-default
+            i.fa.fa-folder
+            span.sr-only Directory
+        .navbar-form.navbar-left
+          span.form-control
+            i.fa.fa-cog
+            span.sr-only Schema
+          .form-group
+            select#schema.form-control
+        ul.nav.navbar-nav.navbar-right
+          li
+            a#minimize.btn-link
+              i.fa.fa-chevron-down
+              span.sr-only Minimize
+          li
+            a#maximize.btn-link
+              i.fa.fa-chevron-up
+              span.sr-only Maximize
+          li
+            a#close.btn-link
+              i.fa.fa-times
+              span.sr-only Close
+    #editor

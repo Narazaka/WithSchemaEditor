@@ -1,0 +1,26 @@
+{
+  "name": "WithSchemaEditor",
+  "description": "JSON/YAML Editor with schemas",
+  "main": "index.js",
+  "authors": [
+    "Narazaka"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "json-editor": "~0.7.23",
+    "metro-bootstrap": "*"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": ["css/font-awesome.css", "fonts/*.*"]
+    }
+  }
+}

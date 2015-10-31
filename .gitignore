@@ -1,0 +1,7 @@
+.*
+!.gitignore
+node_modules
+bower_components
+release
+dst
+WithSchemaEditor.config.yaml
