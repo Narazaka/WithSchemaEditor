@@ -7,6 +7,8 @@ BrowserWindow = remote.require 'browser-window'
 dialog = remote.require 'dialog'
 
 cwd = process.cwd()
+if process.platform == 'darwin' and cwd == '/'
+  cwd = path.join app.getAppPath(), '../../../..'
 
 # read config
 config_path = path.join cwd, 'WithSchemaEditor.config.yaml'
