@@ -63,8 +63,12 @@ set_schema_plugin = (schema_plugin_id, clear_target=true) ->
   else
     $('#target_file').show()
     $('#target_directory').show()
+  if schema_plugin.save
+    $('#save').show()
+  else
+    $('#save').hide()
   editor = get_editor(schema_plugin.schema())
-  schema_plugin.oneditor(editor)
+  schema_plugin.oneditor?(editor)
   if clear_target
     set_target(null)
   read()
@@ -77,7 +81,7 @@ set_target = (target) ->
 
 read = ->
   if config.target?
-    editor.setValue schema_plugin.read(config.target, editor)
+    schema_plugin.read(config.target, editor)
 
 window.onload = ->
   # apply schema plugins settings
@@ -91,6 +95,7 @@ window.onload = ->
 
   last_path = if config.target? then config.target else __dirname
   # dom init
+  $('#save').click -> schema_plugin?.save?(config.target, editor)
   $('#close').click -> app.quit()
   $('#maximize').click ->
     win = BrowserWindow.getFocusedWindow()
