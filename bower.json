@@ -16,11 +16,15 @@
   ],
   "dependencies": {
     "json-editor": "~0.7.23",
-    "metro-bootstrap": "*"
+    "metro-bootstrap": "*",
+    "underscore": "~1.8.3"
   },
   "overrides": {
     "font-awesome": {
-      "main": ["css/font-awesome.css", "fonts/*.*"]
+      "main": [
+        "css/font-awesome.css",
+        "fonts/*.*"
+      ]
     }
   }
 }

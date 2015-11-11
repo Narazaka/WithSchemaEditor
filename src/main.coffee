@@ -127,13 +127,18 @@ window.onload = ->
     set_schema_plugin($('#schema').val())
 
 get_editor = (schema) ->
+  JSONEditor.defaults.templates.underscore = ->
+    if !window._ then return false
+    compile: (template) -> window._.template(template)
+
   _editor = new JSONEditor document.getElementById('editor'),
     ajax: true
     theme: 'bootstrap3'
     iconlib: 'fontawesome4'
-    disable_edit_json: true
+    disable_edit_json: false
     disable_properties: true
     disable_collapse: true
+    template: 'underscore'
     schema: schema
 
   $('html').css(height: "100%")
@@ -142,5 +147,6 @@ get_editor = (schema) ->
   $('.tabs.list-group').parent().parent().css('height': '100%')
   $('.tabs.list-group').parent().css('height': 'calc(100% - 34px - 10px)')
   $('.tabs.list-group').css('overflow': 'auto', 'height': '100%', 'margin-bottom': '0px')
+  $('.tabs.list-group + *').css('overflow': 'auto', 'height': '100%', 'margin-bottom': '0px')
 
   _editor
