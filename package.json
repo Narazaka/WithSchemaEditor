@@ -1,10 +1,13 @@
 {
   "name": "WithSchemaEditor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "JSON/YAML Editor with schemas",
-  "main": "index.js",
-  "author": "Narazaka",
   "license": "MIT",
+  "author": "Narazaka",
+  "main": "index.js",
+  "dependencies": {
+    "js-yaml": "^3.4.3"
+  },
   "devDependencies": {
     "bower": "^1.6.5",
     "coffee-script": "^1.10.0",
@@ -21,8 +24,5 @@
     "main-bower-files": "^2.9.0",
     "merge-stream": "^1.0.0",
     "with-schema-editor-schema-with-schema-editor-config": "^0.0.1"
-  },
-  "dependencies": {
-    "js-yaml": "^3.4.3"
   }
 }
