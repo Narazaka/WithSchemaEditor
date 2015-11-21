@@ -5,6 +5,8 @@ JSON/YAML or any structured data Editor with schemas - using [JSON Editor](https
 
 Schema plugins are required, whose package name begins with `with-schema-editor-schema-`.
 
+![preview](wse.png)
+
 Schema Plugin
 -------------------
 WithSchemaEditor requires "schema plugins", node modules whose package name starts with `with-schema-editor-schema-`.
