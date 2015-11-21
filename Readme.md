@@ -3,7 +3,7 @@ WithSchemaEditor
 
 JSON/YAML or any structured data Editor with schemas - using [JSON Editor](https://github.com/jdorn/json-editor)
 
-![preview](wse.png | width=463)
+![preview](wse.png)
 
 [Schema Plugin](https://www.npmjs.com/search?q=with-schema-editor-schema)
 -------------------
