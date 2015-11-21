@@ -5,7 +5,7 @@ packager = require 'electron-packager'
 mainBowerFiles = require 'main-bower-files'
 pkg = require './package.json'
 app_name = pkg.name
-include_plugin = ['node_modules/with-schema-editor-schema-with-schema-editor-config/**/*', 'node_modules/js-yaml/**/*']
+include_plugin = ['node_modules/with-schema-editor-schema-with-schema-editor-config/**/*', 'node_modules/with-schema-editor-schema-package.json/**/*', 'node_modules/js-yaml/**/*']
 
 files =
   html: 'src/**/*.html'
