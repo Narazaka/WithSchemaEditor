@@ -1,7 +1,7 @@
 WithSchemaEditor
 ===================
 
-JSON/YAML Editor with schemas - using [JSON Editor](https://github.com/jdorn/json-editor)
+JSON/YAML or any structured data Editor with schemas - using [JSON Editor](https://github.com/jdorn/json-editor)
 
 Schema plugins are required, whose package name begins with `with-schema-editor-schema-`.
 
