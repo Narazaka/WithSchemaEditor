@@ -24,6 +24,6 @@
     "main-bower-files": "^2.9.0",
     "merge-stream": "^1.0.0",
     "with-schema-editor-schema-package.json": "0.0.1",
-    "with-schema-editor-schema-with-schema-editor-config": "^0.0.1"
+    "with-schema-editor-schema-with-schema-editor-config": "^0.0.2"
   }
 }
