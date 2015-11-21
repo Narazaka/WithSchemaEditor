@@ -19,7 +19,7 @@ var fs = require('fs');
 module.exports = {
   name: 'foo plugin', // schema plugin name
   read_type: 'file', // file / directory / both
-  filters: function() { // file dialog filters (electron)
+  filters: function(app) { // file dialog filters (electron)
     return [
       {
         name: 'JSON',
@@ -30,18 +30,15 @@ module.exports = {
       }
     ];
   },
-  read: function(file, editor) { // read file function
-    this.file = file;
-    return JSON.parse(fs.readFileSync(file));
+  load: function(app) { // load target(file or directory) function
+    var data = JSON.parse(fs.readFileSync(app.target()));
+    app.editor().setValue(data);
   },
-  oneditor: function(editor) { // called on editor initialized
-    return editor.on('change', (function(_this) {
-      return function() {
-        return fs.writeFileSync(_this.file, JSON.stringify(editor.getValue()));
-      };
-    })(this));
+  save: function(app) { // save function
+    var data = JSON.stringify(app.editor().getValue());
+    fs.writeFileSync(app.target(), data);
   },
-  schema: function() { // JSON schema (JSON Editor)
+  schema: function(app) { // JSON schema (JSON Editor)
     return {
       title: 'config',
       type: 'object',
