@@ -1,6 +1,6 @@
 {
   "name": "WithSchemaEditor",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "JSON/YAML Editor with schemas",
   "license": "MIT",
   "author": "Narazaka",
