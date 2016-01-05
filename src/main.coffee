@@ -200,7 +200,9 @@ class WithSchemaEditorApp
 # patch
 JSONEditor.defaults.templates.underscore = ->
   if !window._ then return false
-  compile: (template) -> window._.template(template)
+  compile: (template) ->
+    (context) ->
+      window._.template(template)(context)
 
 # boot
 $ ->
