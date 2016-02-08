@@ -141,6 +141,7 @@ class WithSchemaEditorApp
   prepare_dom: ->
     for schema_plugin_id, schema_plugin of @schema_plugins()
       $('#schema').append $('<option></option>').text(schema_plugin.name).val(schema_plugin_id)
+    if @schema_plugin_id() then $('#schema').val @schema_plugin_id()
     $('#schema').change =>
       @set_schema($('#schema').val())
 
