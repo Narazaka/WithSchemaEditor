@@ -12,6 +12,7 @@ WithSchemaEditor requires "schema plugins", node modules whose package name star
 Since node modules' minimal form only requires `index.js`, minimal schema plugin is like below.
 
 - node_modules/with-schema-editor-schema-foo/index.js
+
 ```javascript
 
 var fs = require('fs');
