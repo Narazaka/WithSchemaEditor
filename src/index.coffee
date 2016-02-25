@@ -19,8 +19,8 @@ app.on 'ready', ->
       label: "File"
       submenu: [
         { label: "About...", role: "about" }
-        { type: "separator" }
-        { label: "Quit", accelerator: "CmdOrCtrl+Q", click: -> app.quit() }
+        #{ type: "separator" }
+        #{ label: "Quit", accelerator: "CmdOrCtrl+Q", click: -> app.quit() }
       ]
     }
     {
